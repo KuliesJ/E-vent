@@ -20,13 +20,42 @@ header {
     padding: 10px;
 }
 
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+    
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    background-color: #333;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    color: #fff;    
+    padding: 5px;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    color: #FFFFFF;
+    background-color: #ccc;
+}
+
 /* Estilo de la navegación en el encabezado */
 nav {
     display: flex;
     justify-content: space-between;
 }
 
-nav a {
+nav a, nav div {
     color: #fff; /* Color de los enlaces en el encabezado */
     margin-right: 10px;
 }

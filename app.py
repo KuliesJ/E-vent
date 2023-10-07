@@ -102,6 +102,9 @@ def editar_ambiente(ambiente_id):
 
     return render_template('editar_ambiente.html', ambiente=ambiente)
 
+@app.route('/actividades/')
+def actividades():
+    return render_template('actividades.html')
 
 if __name__ == "__main__":
     app.run(host='127.0.0.1', port=8000, debug=True)

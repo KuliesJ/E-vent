@@ -1,0 +1,102 @@
+{%extends "layout.html"%}
+
+{%block title%}
+Actividades
+{%endblock%}
+
+{%block estilos%}
+<link rel="stylesheet" href="{{ url_for('static', filename='actividades.css') }}">
+{%endblock%}
+
+{%block contenido%}
+<div class = "activ-body">
+    <div class = "activ-section">
+        <h2>Nombre del Evento</h2>
+    </div>
+    <div class = "activ-columns">
+        <div class="activ-section">
+            <div class = "activ-columns">
+                <h3>Ambiente</h3>
+                <select>
+                    <option>Ambiente1</option>
+                    <option>Ambiente2</option>
+                    <option>Ambiente3</option>
+                    <option>Ambiente4</option>
+                </select>
+                <button>Detalle</button>
+            </div>
+            <div class = "activ-columns">
+                <h3>Tipo de Actividad</h3>
+                <select>
+                    <option>Tipo1</option>
+                    <option>Tipo2</option>
+                    <option>Tipo3</option>
+                    <option>Tipo4</option>
+                </select>
+                <button>Detalle</button>
+            </div>
+            <table>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Hora inicio</th>
+                    <th>Hora fin</th>
+                </tr>
+                <tr>
+                    <td>XX/XX/XX</td>
+                    <td>XXXX</td>
+                    <td>XXX</td>
+                </tr>
+            </table>
+        </div>
+        <div class="activ-centerCenter">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Qr-1.svg/220px-Qr-1.svg.png" alt="">
+        </div>
+    </div>
+    <div class="activ-section">
+        <div class="activ-columns">
+            <h2>Ponentes</h2>
+            <button>Añadir Ponente</button>
+        </div>
+        <table>
+            <tr>
+                <th>Ponente</th>
+                <th>Detalle</th>
+            </tr>
+            <tr>
+                <td>Ponente1</td>
+                <td>Desc1</td>
+            </tr>
+            <tr>
+                <td>Ponente2</td>
+                <td>Desc2</td>
+            </tr>
+            <tr>
+                <td>Ponente3</td>
+                <td>Desc3</td>
+            </tr>
+        </table>
+        <div class="activ-columns">
+            <h2>Materiales</h2>
+            <button>Añadir Material</button>
+        </div>
+        <table>
+            <tr>
+                <th>Materiales</th>
+                <th>Cantidad</th>
+            </tr>
+            <tr>
+                <td>Material1</td>
+                <td>Cant1</td>
+            </tr>
+            <tr>
+                <td>Material2</td>
+                <td>Cant2</td>
+            </tr>
+            <tr>
+                <td>Material3</td>
+                <td>Cant3</td>
+            </tr>
+        </table>
+    </div>
+</div>
+{%endblock%}

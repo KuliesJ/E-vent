@@ -10,6 +10,30 @@
         <nav>
             <div>
                 <a href="/">Inicio</a>
+                {% if current_user.is_authenticated %}
+                    {% if current_user.is_admin %}
+                        <div class="dropdown">
+                            <div>Configuracion</div>
+                            <div class="dropdown-content">
+                                <a href="{{ url_for('index')}}">Eventos</a>
+                                <a href="{{ url_for('index')}}">Ambientes</a>
+                                <a href="{{ url_for('actividades')}}">Actividades</a>
+                                <a href="{{ url_for('index')}}">Materiales</a>
+                            </div>
+                        </div>
+                        <a href="{{ url_for('index') }}">Caja</a>
+                        <a href="{{ url_for('index') }}">Administrativa</a>
+                    {% else %}
+                        <div class="dropdown">
+                            <div>Pre-inscripciones</div>
+                            <div class="dropdown-content">
+                                <a href="{{ url_for('index')}}">Preinscripciones</a>
+                                <a href="{{ url_for('index')}}">Inscripciones</a>
+                            </div>
+                        </div>                      
+                    {% endif %}
+                {% endif %}
+                
             </div>
             <div>
                 {% if current_user.is_authenticated %}
