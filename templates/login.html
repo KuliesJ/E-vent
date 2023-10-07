@@ -1,0 +1,31 @@
+{%extends "layout.html"%}
+
+{%block title%}
+Login
+{%endblock%}
+
+{%block estilos%}
+{%endblock%}
+
+{%block contenido%}
+<div class="page">
+    
+    <div class="form">
+        <h1>Login Form</h1>
+        <form action="" method="post">
+            <div class="input-box">
+                <label>Username</label>
+                <br>
+                <input type="text" name="username" autocomplete="off" required>
+            </div>
+            <div class="input-box">
+                <label>Password</label>
+                <br>
+                <input type="password" name="password" autocomplete="off" required>
+            </div>
+            <button class="btn" type="submit">Login</button>
+        </form>
+    </div>
+
+</div>
+{%endblock%}

@@ -1,0 +1,111 @@
+* {
+    --color1: #48ff00;
+    --color2: #18121e;
+
+    color: black;
+    margin: 0;
+    text-decoration-line: none;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--color1);
+}
+
+/*HEADER*/
+
+header, footer {
+    background-color: var(--color2);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    font-size: 20px;
+    gap: 34px;
+}
+
+header * {
+    color: var(--color1);
+    box-sizing: content-box;
+}
+
+header nav, footer nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex: 1;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+header a, footer a {
+    flex: 1;
+    text-align: center;
+    transition: color 0.2s;
+    font-weight: bold;
+}
+
+header a:hover, footer a:hover{
+    color: white;
+}
+
+header .searchbar {
+    display: flex;
+    justify-content: center;
+}
+
+header .searchbar button {
+    color: #000;
+}
+
+header input {
+    color: var(--color2);
+    float: right;
+}
+
+#toggle-menu {
+    flex: 0;
+    min-width: 0px;
+    list-style: none;
+    background-color: var(--color2);
+    text-align: left;
+    transition: flex-grow 1s, color 0.7s;
+    color: var(--color2);
+    padding: 0;
+    
+}
+
+#toggle-menu li {
+    color: inherit;
+    padding: 5% 0 5% 27%;
+    margin: 0;
+}
+
+#toggle-menu li:hover{
+    background-color: var(--color1);
+    color: var(--color2);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-header {
+    flex: 0;
+    color: white;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+footer * {
+    color: var(--color1);
+}
