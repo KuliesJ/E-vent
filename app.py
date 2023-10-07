@@ -9,6 +9,7 @@ from flask_login import (
 from user import users, get_user, User, get_user_from_email, get_user_from_id
 from werkzeug.utils import secure_filename
 import os
+from functions import obtener_ambiente_por_id
 
 app = Flask(__name__)
 login_manager = LoginManager()
@@ -66,6 +67,41 @@ def register():
 def logout():
     logout_user()
     return redirect(url_for('index'))
+
+@app.route('/agregar_ambiente', methods=['GET', 'POST'])
+@login_required  # Requiere que el usuario esté autenticado como administrador
+def crear_ambiente():
+    if request.method == 'POST':
+        # Obtener los datos del formulario
+        nombre = request.form['nombre']
+        capacidad = request.form['capacidad']
+        ubicacion = request.form['ubicacion']
+        descripcion = request.form['descripcion']
+        # Agregar lógica para manejar la creación de ambiente en la base de datos
+
+        # Después de crear el ambiente, redirigir a la página de confirmación o inicio
+        return redirect(url_for('index'))
+    return render_template('agregar_ambiente.html')
+
+@app.route('/editar_ambiente/<ambiente_id>', methods=['GET', 'POST'])
+@login_required  # Requiere que el usuario esté autenticado como administrador
+def editar_ambiente(ambiente_id):
+    # Agregar lógica para cargar los datos del ambiente a editar
+    ambiente = obtener_ambiente_por_id(ambiente_id)
+
+    if request.method == 'POST':
+        # Obtener los datos del formulario
+        nombre = request.form['nombre']
+        capacidad = request.form['capacidad']
+        ubicacion = request.form['ubicacion']
+        descripcion = request.form['descripcion']
+        # Agregar lógica para manejar la edición del ambiente en la base de datos
+
+        # Después de editar el ambiente, redirigir a la página de confirmación o inicio
+        return redirect(url_for('index'))
+
+    return render_template('editar_ambiente.html', ambiente=ambiente)
+
 
 if __name__ == "__main__":
     app.run(host='127.0.0.1', port=8000, debug=True)

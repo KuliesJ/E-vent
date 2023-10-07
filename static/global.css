@@ -1,111 +1,61 @@
-* {
-    --color1: #48ff00;
-    --color2: #18121e;
-
-    color: black;
+/* Reset de estilos para eliminar márgenes y rellenos predeterminados */
+body, h1, h2, h3, p, ul, li, a {
     margin: 0;
-    text-decoration-line: none;
-    font-family: 'Source Sans Pro', sans-serif;
-}
-
-body {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: var(--color1);
-}
-
-/*HEADER*/
-
-header, footer {
-    background-color: var(--color2);
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 5%;
-    font-size: 20px;
-    gap: 34px;
-}
-
-header * {
-    color: var(--color1);
-    box-sizing: content-box;
-}
-
-header nav, footer nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-    flex: 1;
-}
-
-header div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-}
-
-header a, footer a {
-    flex: 1;
-    text-align: center;
-    transition: color 0.2s;
-    font-weight: bold;
-}
-
-header a:hover, footer a:hover{
-    color: white;
-}
-
-header .searchbar {
-    display: flex;
-    justify-content: center;
-}
-
-header .searchbar button {
-    color: #000;
-}
-
-header input {
-    color: var(--color2);
-    float: right;
-}
-
-#toggle-menu {
-    flex: 0;
-    min-width: 0px;
-    list-style: none;
-    background-color: var(--color2);
-    text-align: left;
-    transition: flex-grow 1s, color 0.7s;
-    color: var(--color2);
     padding: 0;
-    
+    list-style: none;
+    text-decoration: none;
 }
 
-#toggle-menu li {
-    color: inherit;
-    padding: 5% 0 5% 27%;
-    margin: 0;
+/* Estilo del cuerpo del documento */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2; /* Color de fondo neutro */
+    color: #333; /* Color de texto neutro */
 }
 
-#toggle-menu li:hover{
-    background-color: var(--color1);
-    color: var(--color2);
-    font-weight: bold;
-    cursor: pointer;
+/* Estilo del encabezado */
+header {
+    background-color: #333; /* Color de fondo del encabezado */
+    color: #fff; /* Color de texto en el encabezado */
+    padding: 10px;
 }
 
-.btn-header {
-    flex: 0;
-    color: white;
-    padding-bottom: 5px;
-    cursor: pointer;
+/* Estilo de la navegación en el encabezado */
+nav {
+    display: flex;
+    justify-content: space-between;
 }
 
-footer * {
-    color: var(--color1);
+nav a {
+    color: #fff; /* Color de los enlaces en el encabezado */
+    margin-right: 10px;
+}
+
+/* Estilo del contenido principal */
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff; /* Color de fondo del contenido */
+    border: 1px solid #ccc; /* Borde alrededor del contenido */
+}
+
+/* Estilo del pie de página */
+footer {
+    background-color: #333; /* Color de fondo del pie de página */
+    color: #fff; /* Color de texto en el pie de página */
+    padding: 10px;
+}
+
+/* Estilo de los mensajes emergentes */
+.alert {
+    background-color: #333; /* Color de fondo de la alerta */
+    color: #fff; /* Color de texto de la alerta */
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+/* Estilo de los enlaces en el contenido */
+section a {
+    color: #007bff; /* Color de los enlaces en el contenido */
 }
